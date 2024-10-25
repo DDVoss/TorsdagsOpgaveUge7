@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[]args) {
         ArrayList<String> StudentCourses = new ArrayList<>();
         ArrayList<String> canTeachCourses = new ArrayList<>();
-        StudentCourses.add("Java 0.1");
+        StudentCourses.add("Java");
         canTeachCourses.add("Java for Beginners");
 
 
@@ -19,7 +19,25 @@ public class Main {
         Teacher teachB = new Teacher("Jesper Kock",canTeachCourses);
         Teacher teachC = new Teacher("Tess Gaston",canTeachCourses);
 
+        ArrayList<Person> students = new ArrayList<>();
+        students.add(studA);
+        students.add(studB);
+        students.add(studC);
 
+        ArrayList<Person> teachers = new ArrayList<>();
+        teachers.add(teachA);
+        teachers.add(teachB);
+        teachers.add(teachC);
+
+        String subjectA = "Java";
+        for(Person sa : students) {
+            if (sa.addCourse(subjectA)){
+                System.out.println(sa.getName() + "just started studying" + subjectA);
+            } else {
+                System.out.println(sa.getName() + " have already completed the " + subjectA +" course");
+            }
+            //sa.addCourse("C++");
+        }
 
 
     }
