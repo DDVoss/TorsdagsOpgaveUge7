@@ -38,7 +38,10 @@ public class Cinema {
         return false;
     }
 
-    public boolean cancelReservation(int row, int seat) {
+    public boolean cancelReservation(int row, int seat) { // #5 det samme er kopieret fra fejl 3 så cancelReservation bliver true
+        row -= 1;
+        seat -= 1;
+
         if (seats[row][seat].equals("X")) {
             seats[row][seat] = "O"; // #5 vær sikker på at det ikke er O eller tallet 0
             return true;
