@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public abstract class Person {
     String name;
+
     Person(String name) {
         setName(name);
     }
